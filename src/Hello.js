@@ -1,20 +1,14 @@
 import React from 'react';
 
-class Message extends React.Component{
+export class Welcome extends React.Component{
     render() {
+        let name = this.props.name
         return (
-            <p>What a beautiful day!</p>
+            <p>Welcome, {name}</p>
         )
     }
 }
 
-export class Hello extends React.Component{
-    render() {
-        return (
-            <div>
-               <h1>Hello World</h1>
-               <Message />
-            </div>
-        )
-    }
+Welcome.defaultProps = {
+        name: 'Marco'
 }
