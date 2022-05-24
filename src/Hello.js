@@ -2,13 +2,12 @@ import React from 'react';
 
 export class Welcome extends React.Component{
     render() {
-        let name = this.props.name
         return (
-            <p>Welcome, {name}</p>
+            <div>
+              <p>Welcome, {this.props.name}</p>
+              <p>Your age is {this.props.age}</p>
+            </div>
         )
     }
 }
 
-Welcome.defaultProps = {
-        name: 'Marco'
-}
