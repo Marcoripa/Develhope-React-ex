@@ -1,14 +1,14 @@
 import React from "react";
 
-export class ClickCounter extends React.Component {
-    state = {
-        count: 0
-    }
-    
-    handleIncrement = () => {
-        this.setState(state => {
+export class ClickTracker extends React.Component{
+state = {
+    content: ''
+}
+
+    handleClick = (event) => { 
+        this.setState(() => {
             return {
-                count: state.count + 1
+                content: event.target.name
             }
         })
     }
@@ -16,9 +16,11 @@ export class ClickCounter extends React.Component {
     render() {
         return (
             <div>
-               {this.state.count}
-               <button onClick = {this.handleIncrement}>Increment</button>
-            </div>           
+              <button onClick={this.handleClick} name="Button One">Button One</button>
+              <button onClick={this.handleClick} name="Button Two">Button Two</button>
+              <button onClick={this.handleClick} name="Button Three">Button Three</button>
+              <h1>The last button clicked was: {this.state.content}</h1>
+            </div>
         )
     }
 }

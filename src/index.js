@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {ClickCounter} from "./Counter"
+import {ClickTracker} from "./Counter"
 
 
-ReactDOM.render(<ClickCounter />, document.getElementById('root'))
+ReactDOM.render(<ClickTracker />, document.getElementById('root'))
