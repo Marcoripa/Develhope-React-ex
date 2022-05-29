@@ -12,3 +12,9 @@ input {
     margin-top: 0.5rem ;
     width: 300px
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
