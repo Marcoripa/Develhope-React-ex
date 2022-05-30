@@ -11,7 +11,8 @@ export class TodoList extends React.Component {
     
     handlItem = () => {
         this.setState({
-            items: [...this.state.items, this.state.addItem ]
+            items: [...this.state.items, this.state.addItem],
+            addItem: ''
         })
     } 
     handleInput = (event) => {
