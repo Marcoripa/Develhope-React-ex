@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(216, 142, 4);
+}
+
+.container {
+    background-color: beige;
+    min-width: fit-content;
+    max-width: 30%;
+    padding: 2rem;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+   transform: translateX(-25%);
+   font-size: 26px;
+}
+
+button {
+    margin: 1rem;
+    color: white;
+    font-size: 24px;
+    background-color: rgb(130, 4, 4);
+    border-radius: 10px;
+}
+
+input {
+    height: 20px;
+    text-align: center;
+    margin: 0.5rem;
+}
