@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Welcome } from "./Welcome";
-import './index.css';
+import {Login} from './Login'
 
 
-ReactDOM.render(<Welcome name={'Marco'}/>, document.getElementById('root'))
+ReactDOM.render(<Login />, document.getElementById('root'))
