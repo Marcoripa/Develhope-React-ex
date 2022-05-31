@@ -1,5 +1,7 @@
 import React from "react";
-import {TodoList} from "./TodoList";
+import { Container } from "./Container";
+import {Welcome} from './Welcome';
+import './index.css'
 
 
 
@@ -7,7 +9,9 @@ export class App extends React.Component{
     render() {
         return (
             <div>
-                <TodoList/>
+                <Container title={'this is a title'}>
+                    <Welcome name={'Geronimo'}/>
+                </Container>
             </div>
         )
     }
