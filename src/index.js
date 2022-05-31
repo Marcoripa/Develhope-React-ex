@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {App} from "./App"
+import { Welcome } from "./Welcome";
+import './index.css';
 
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Welcome name={'Marco'}/>, document.getElementById('root'))
