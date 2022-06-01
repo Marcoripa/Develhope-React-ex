@@ -1,18 +1,25 @@
 import React from "react";
-import { Container } from "./Container";
-import {Welcome} from './Welcome';
-import './index.css'
+import { TodoList } from "./TodoList";
 
 
 
 export class App extends React.Component{
     render() {
         return (
-            <div>
-                <Container title={'this is a title'}>
-                    <Welcome name={'Geronimo'}/>
-                </Container>
-            </div>
+            <TodoList 
+            render={items => {
+                return (
+                    <div>
+                        {items.map((item, index )=> {
+                            return <li key={index}>{item}
+                            <button 
+                                onClick={(event) => {event.target.parentElement.remove()}} className='remove'>remove
+                            </button> </li>
+                        })}
+                    </div>
+                )
+            }}
+            ></TodoList>
         )
     }
 }

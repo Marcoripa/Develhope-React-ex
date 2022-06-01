@@ -3,9 +3,7 @@ import './todoList.css'
 
 export class TodoList extends React.Component {
     state = {
-        items: [
-            'table', 'chair', 'lamp'
-        ],
+        items: ['table', 'chair', 'lamp'],
         addItem: ''
     }
     
@@ -36,14 +34,7 @@ export class TodoList extends React.Component {
         return (
             <div className='container'>
                       <ul>
-                    {this.state.items.map((item, index) => (
-                        <li key={index}>{item}
-                               <button 
-                                onClick={this.handleRemove} className='remove'>remove
-                            </button>   
-                        </li>       
-                        )
-                        )}
+                          {this.props.render(this.state.items)}
                       </ul>
                 <input
                     value={this.state.addItem}
