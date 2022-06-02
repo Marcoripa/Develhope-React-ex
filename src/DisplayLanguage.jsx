@@ -9,7 +9,8 @@ export class DisplayLanguage extends React.Component {
                  {language => {
                      return (
                          <div>
-                             <span>The selected language is: {language}</span>
+                             {language === 'en' ? <h1>The selected language is: {language.toLocaleUpperCase()}</h1>
+                             : <h1>La lingua selezionata è: {language.toLocaleUpperCase()}</h1>}
                          </div>
                      )
                  }}
