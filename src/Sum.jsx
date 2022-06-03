@@ -1,4 +1,4 @@
-function Sum({numbers}) {
+function Sum({numbers = [1, 2, 3, 4]}) {
     let sum = 0
     for (let number of numbers) {
         sum += number
