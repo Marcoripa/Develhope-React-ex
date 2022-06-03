@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Sum from './Sum'
+import { ClickTracker } from "./Counter";
 import './index.css'
 
 
-ReactDOM.render(<Sum />, document.getElementById('root'))
+ReactDOM.render(<ClickTracker />, document.getElementById('root'))

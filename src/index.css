@@ -4,8 +4,25 @@ body {
 
 h1 {
     margin-top: 10rem;
-    font-size: 120px;
+    font-size: 100px;
     text-align: center;
     color: yellow;
     font-weight: bold;
+}
+
+button {
+    margin: 2rem 2rem;
+    border: 2px solid darkblue;
+    background-color: transparent;
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+button:hover {
+    background-color: darkblue;
+    color: rgb(41, 169, 212);
+    cursor: pointer;
 }

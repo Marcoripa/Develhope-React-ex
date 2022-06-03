@@ -1,26 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 
-export class ClickTracker extends React.Component{
-state = {
-    content: ''
-}
+export function ClickTracker() {
+    const [count, setCount] = useState(0)
 
-    handleClick = (event) => { 
-        this.setState(() => {
-            return {
-                content: event.target.name
-            }
-        })
+    const handleClick = () => { 
+       setCount(count + 1)
     }
 
-    render() {
-        return (
+    return (
             <div>
-              <button onClick={this.handleClick} name="Button One">Button One</button>
-              <button onClick={this.handleClick} name="Button Two">Button Two</button>
-              <button onClick={this.handleClick} name="Button Three">Button Three</button>
-              <h1>The last button clicked was: {this.state.content}</h1>
+              <button onClick={handleClick}>Increment</button>
+              <h1>The current value is: {count}</h1>
             </div>
-        )
-    }
+    )
 }
