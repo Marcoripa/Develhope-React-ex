@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ClickTracker } from "./Counter";
-import './index.css'
+import {Login} from './Login'
 
 
-ReactDOM.render(<ClickTracker />, document.getElementById('root'))
+ReactDOM.render(<Login />, document.getElementById('root'))

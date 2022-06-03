@@ -10,7 +10,8 @@ div {
 
 input {
     margin-top: 0.5rem ;
-    width: 300px
+    width: 250px;
+    height: 20px;
 }
 
 form {
