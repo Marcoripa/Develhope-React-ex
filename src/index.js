@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import GitHubUser from "./GitHubUser";
+import {GitHubUserList} from "./GitHubUserList";
 import './index.css'
 
 
-ReactDOM.render(<GitHubUser name={'mojombo'}/>, document.getElementById('root'))
+ReactDOM.render(<GitHubUserList/>, document.getElementById('root'))
