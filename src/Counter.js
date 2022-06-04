@@ -1,12 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
-export function ClickTracker() {
+export function ClickTracker({counterChange}) {
     const [count, setCount] = useState(0)
 
     const handleClick = () => { 
-       setCount(count + 1)
+      setCount(count + 1)
     }
-
+    
+  useEffect(() => {
+      counterChange(count)
+    }, [count, counterChange])
+  
+   
     return (
             <div>
               <button onClick={handleClick}>Increment</button>

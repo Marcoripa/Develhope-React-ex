@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Login} from './Login'
+import {ClickTracker} from './Counter'
+import './index.css'
 
+const onCounterChange = (value) => {
+    alert(`The count value is: ${value}`)
+}
 
-ReactDOM.render(<Login />, document.getElementById('root'))
+ReactDOM.render(<ClickTracker counterChange={onCounterChange}/>, document.getElementById('root'))
