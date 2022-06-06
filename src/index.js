@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {GitHubUserList} from "./GitHubUserList";
+import {Counter} from './Counter'
 import './index.css'
 
 
-ReactDOM.render(<GitHubUserList/>, document.getElementById('root'))
+ReactDOM.render(<Counter />, document.getElementById('root'))

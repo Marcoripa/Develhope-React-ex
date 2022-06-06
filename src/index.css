@@ -1,10 +1,12 @@
 body {
     background-color: rgb(41, 169, 212);
+    display: flex;
+    justify-content: center;
 }
 
 h1, h2, p, span {
-    margin-top: 1rem;
-    font-size: 20px;
+    margin-top: 10rem;
+    font-size: 50px;
     text-align: center;
     color: yellow;
     font-weight: bold;
@@ -16,3 +18,17 @@ h1, h2, p, span {
     margin: 1rem auto;
 }
 
+.button-area {
+
+}
+
+button {
+   padding: 0.4rem;
+   background-color: brown;
+   border: none;
+   color: white;
+   font-weight: bolder;
+   font-size: 16px;
+   margin: 0.5rem;
+   border-radius: 10px;
+}
