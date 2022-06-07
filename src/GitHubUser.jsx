@@ -1,11 +1,17 @@
-function GitHubUser({id, login, url}) {
+import { useFetch } from "./useGitHubUser"
+const username = 'mojombo'
+const url = `https://api.github.com/users/${username}`
+
+
+function GitHubUser() {
+    const {user} = useFetch(url)
+
     return (
-        <div className='username' key={id}>
-            <h1>{id}</h1>
-            <h2>{login}</h2>
-            <p>{url}</p>
+        <div>
+            <h1>{user.login}</h1>
         </div>
     )
+    
 }
 
 export default GitHubUser

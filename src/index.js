@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Form } from "./Form";
+import GitHubUser from "./GitHubUser";
 import './index.css'
 
 
-ReactDOM.render(<Form />, document.getElementById('root'))
+ReactDOM.render(<GitHubUser />, document.getElementById('root'))
