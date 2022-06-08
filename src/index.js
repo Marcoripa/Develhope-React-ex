@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Counter} from './Counter'
+import { Root } from "./Root";
 import './index.css'
 
 
-ReactDOM.render(<Counter />, document.getElementById('root'))
+ReactDOM.render(<Root />, document.getElementById('root'))
