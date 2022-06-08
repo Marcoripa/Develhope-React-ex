@@ -18,8 +18,10 @@ h1, h2, p, span {
     margin: 1rem auto;
 }
 
-.button-area {
-
+nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
 }
 
 button {
