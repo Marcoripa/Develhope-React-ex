@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import {Counter} from './Counter'
 import { ShowGitHubUser } from "./ShowGitHubUser";
+import {GitHubUserList} from "./GitHubUserList";
 
 
 export function App() {
@@ -11,13 +12,15 @@ export function App() {
         <nav>
             <Link to='/'>Home</Link>
             <Link to='/counter'>Counter</Link>
-            <Link to='./:username'>Tony</Link>
+            <Link to='/users'>Users List</Link>
         </nav>
          <Routes>
             <Route path='/' element={<Welcome name='Tony'/>}/>
             <Route path='/counter' element={<Counter />} />
-            {/* <Route path='/:username' element={<ShowGitHubUser />} /> */}
             <Route path='*' element={<div><p>Not Found</p></div>}/>
+            <Route path='/users' element={<GitHubUserList/>} >
+               <Route path=':username' element={<ShowGitHubUser />}/>
+            </Route>   
         </Routes>
         </>
     )
