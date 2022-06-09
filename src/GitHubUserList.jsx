@@ -31,11 +31,11 @@ export function GitHubUserList() {
             
             {!isLoading
                 ? <h1>Loading...</h1>
-                :  <ul>
+                :   <ul>
                     <Link to="/users/tony">Tony</Link>   
                     <Link to="/users/mario">Mario</Link>   
-                    <Link to="/users/John">John</Link>   
-                </ul>
+                    <Link to="/users/John">John</Link>  
+                </ul> 
             }
 
             <Outlet />
