@@ -1,7 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Root } from "./Root";
-import './index.css'
+import {store} from './Redux/Store'
+import {incrementCounter} from './Redux/CounterReducer'
 
 
-ReactDOM.render(<Root />, document.getElementById('root'))
+
+store.dispatch(incrementCounter())
+
+console.log(store.getState())
+
