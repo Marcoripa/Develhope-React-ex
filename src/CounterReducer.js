@@ -2,30 +2,30 @@ const initialValue = 0
 
 function incrementCounter() {
     return {
-        type: increment,
+        type: 'increment',
         payload: 1
     }
 }
 
 function decrementCounter() {
     return {
-        type: decrement,
+        type: 'decrement',
         payload: 1
     }
 }
 
 function resetCounter() {
     return {
-        type: reset
+        type: 'reset'
     }
 }
 
 function counterReducer(state = initialValue, action) {
-    switch(action) {
+    switch(action.type) {
         case 'increment':{
             return state + action.payload
         }
-        case 'decremenet': {
+        case 'decrement': {
             return state - action.payload
         }
         case 'reset': {
