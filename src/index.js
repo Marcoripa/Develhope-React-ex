@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import GitHubUser from "./GitHubUser";
+import {DisplayLanguage} from './DisplayLanguage'
 import './index.css'
 
 
-ReactDOM.render(<GitHubUser />, document.getElementById('root'))
+ReactDOM.render(<DisplayLanguage />, document.getElementById('root'))
