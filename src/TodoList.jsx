@@ -12,6 +12,7 @@ export class TodoList extends React.Component {
     handlItem = () => {
         this.setState({
             items: [...this.state.items, this.state.addItem],
+            //riassegna il valore dell'input ad una stringa vuota
             addItem: ''
         })
     } 
