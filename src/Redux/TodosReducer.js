@@ -1,9 +1,9 @@
-const defaultState = []
+const defaultState = [{id: 1, todo: 'Study Redux', completed: false}, {id: 2, todo: 'Workout', completed: true}]
 
-export function addTodo(todo) {
+export function addTodo(id, todo, completed) {
     return {
         type: 'add',
-        payload: todo
+        payload: {id, todo, completed}
     }
 }
 
@@ -14,10 +14,10 @@ export function deleteTodo(id) {
     }
 }
 
-export function editTodo(id, title, completed) {
+export function editTodo(id, todo, completed) {
     return {
         type: 'edit',
-        payload: {id, title, completed}
+        payload: {id, todo, completed}
     }
 }
 
@@ -32,7 +32,7 @@ export function TodosReducer(state = defaultState, action) {
         case 'edit': {
             return state.map(todo => {
                 if (todo.id === action.payload.id) {
-                    return {...todo, ...action.payload.title}
+                    return {...todo, ...action.payload}
                 }
                 return todo
             })
