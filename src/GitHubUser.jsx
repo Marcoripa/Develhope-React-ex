@@ -1,17 +1,17 @@
 import useSWR from 'swr';
 
-const fetcher = url=> fetch(url).then((res) => res.json())
 
 function GitHubUser({name}) {
-    // const {user} = useFetch(`https://api.github.com/users/${name}`)
 
+    const fetcher = (url) => name && fetch(url).then((res) => res.json())
+   
     const {data, error} = useSWR(`https://api.github.com/users/${name}`, fetcher)
 
     return (
         <div>
             {!data && !error && <h3>Loading...</h3>}
             {error && <h3>An error occurred</h3>}
-            {data && !error && 
+            {data && 
                     <section>
                        <h1>My name is: {data.login}</h1> 
                        <h2>I am currently in: {data.location}</h2>
