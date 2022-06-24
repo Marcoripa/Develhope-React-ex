@@ -1,3 +1,4 @@
+import { incrementCounter } from './Redux/CounterReducer'
 import {store} from './Redux/Store'
 import {addTodo, deleteTodo, editTodo} from './Redux/TodosReducer'
 
@@ -6,6 +7,10 @@ console.log(store.getState())
 
 //add an item
 store.dispatch(addTodo(3, 'Bake a cake', false))
+console.log(store.getState())
+
+//increment counter
+store.dispatch(incrementCounter())
 console.log(store.getState())
 
 //delete an item

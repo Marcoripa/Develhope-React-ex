@@ -21,7 +21,7 @@ export function editTodo(id, todo, completed) {
     }
 }
 
-export function TodosReducer(state = defaultState, action) {
+export function todosReducer(state = defaultState, action) {
     switch(action.type) {
         case 'add': {
             return [...state, action.payload]
